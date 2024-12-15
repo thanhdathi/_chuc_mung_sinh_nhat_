@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập và lưu văn bản</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Nền gradient đẹp */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* Màu nền trong suốt */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px; /* Giới hạn chiều rộng */
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #6a11cb;
+        }
+    </style>
+    <script>
+        function storeInput() {
+            // Lấy giá trị từ input
+            var userInput = document.getElementById("userInput").value;
+            
+            // In ra dữ liệu nhập trong console
+            console.log("Đoạn văn bản đã nhập (chỉ bạn có thể thấy):", userInput);
+            
+            // Thông báo cho người dùng
+            alert("Dữ liệu đã được lưu!");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Nhập điều ước: </h2>
+        <input type="text" id="userInput" placeholder="Nhập ở đây nek">
+        <button onclick="storeInput()">Gửi</button>
+    </div>
+</body>
+</html>

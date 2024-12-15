@@ -8,7 +8,14 @@
         body {
             margin: 0;
             overflow: hidden; /* Ẩn cuộn trang */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black; /* Thêm màu nền đen cho trang */
+            position: relative;
         }
+
         .video-container {
             position: absolute;
             top: 0;
@@ -16,14 +23,38 @@
             width: 100%;
             height: 100%;
         }
+
         iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
+
+        button {
+            position: absolute;
+            bottom: 20px; /* Đặt nút ở dưới cùng */
+            left: 50%; /* Căn giữa theo chiều ngang */
+            transform: translateX(-50%); /* Đảm bảo nút hoàn toàn căn giữa */
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: rgba(255, 255, 255, 0.7); /* Nền trong suốt của nút */
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 10; /* Đảm bảo nút hiển thị trên video */
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.9); /* Nền sáng hơn khi di chuột */
+        }
     </style>
 </head>
 <body>
+    <a href="nhapvanban.html">
+        <button>Tiếp tục</button>
+    </a>
     <div class="video-container">
         <iframe src="https://www.youtube.com/embed/VWm0xaxi4EI?autoplay=1&loop=1&playlist=VWm0xaxi4EI" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>

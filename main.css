@@ -7,11 +7,3 @@
     padding: 10px;
     border-radius: 5px;
 }
-.my-button {
-    position: absolute; /* Hoặc fixed để cố định vị trí */
-    bottom: 50px; /* Khoảng cách từ cạnh trên của trang */
-    right: 100px; /* Khoảng cách từ cạnh trái của trang */
-.my-button {
-    position: absolute; /* Hoặc fixed để cố định vị trí */
-    bottom: 50px; /* Khoảng cách từ cạnh trên của trang */
-    right: 100px; /* Khoảng cách từ cạnh trái của trang */

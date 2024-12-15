@@ -1,0 +1,14 @@
+button {
+    padding: 10px 20px; /* Kích thước nút */
+    font-size: 16px; /* Kích thước chữ trong nút */
+    color: white; /* Màu chữ trong nút */
+    background-color: #ea80b0; /* Màu nền của nút */
+    border: none; /* Xóa viền nút */
+    border-radius: 5px; /* Bo tròn góc nút */
+    cursor: pointer; /* Hiển thị con trỏ chuột khi di chuột qua nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu nền */
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    bottom: 20px; /* Khoảng cách từ đáy */
+    left: 50%; /* Đặt nút ở giữa */
+    transform: translateX(-50%); /* Canh giữa theo chiều ngang */
+}

@@ -13,7 +13,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nhạc nền với Thanh Điều Khiển</title>
   <link rel="stylesheet" href="audio.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nghe âm thanh từ YouTube</title>
+  <link rel="stylesheet" href="main2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phát Nhạc</title>
+  
   <style>
   html, body {
       height: 100%;
@@ -52,18 +59,44 @@
     }
     
     
+    
   </style>
  </HEAD>
  <BODY>
-    <audio controls class="custom-audio">
-        <source src="https://pixabay.com/sound-effects/happy-birthday-to-you-bossa-nova-style-arrangement-21399/.mp3" type="audio/mpeg">
-    </audio>
-    
+    <div id="player"></div>
     <h1>Happy birthday</h1>
-  
+   
+   
     <a href="thanhdat2.html"><button>Tiếp tục</button></a>
+
     <canvas id="pinkboard"></canvas>
     <script>
+        window.onload = function() {
+            var audio = document.getElementById("audioPlayer");
+            audio.play();
+        };
+        var tag = document.createElement('script');
+        tag.src = ":/https/www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Tạo player
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '0', // Ẩn chiều cao
+                width: '0', // Ẩn chiều rộng
+                videoId: 'https://www.youtube.com/watch?v=AopIqXMTC_I', // Thay thế ID video của bạn
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        // Phát âm thanh khi player sẵn sàng
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }   
       var settings = {
           particles: {
              length:   500, // maximum amount of particles
